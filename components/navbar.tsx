@@ -12,38 +12,16 @@ export function Navbar() {
             <Image src="/logo-flama.svg" alt="Flama Logo" width={100} height={40} className="h-6 w-auto" />
           </Link>
 
-          {/* Center Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-{/* Center Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link
-              href="#inicio"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Inicio
-            </Link>
-            <Link
-              href="#features"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Funcionalidades
-            </Link>
-            <Link
-              href="#faq"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              F.A.Q.
-            </Link>
-          </div>
-          </div>
-
           {/* CTA Button */}
-          <Button
-            variant="outline"
-            className="hidden md:inline-flex rounded-full border-foreground/20 hover:bg-foreground/5 bg-transparent"
-          >
-            Únete a la waitlist
-          </Button>
+          <Link href="/#waitlist">
+              <Button
+                variant="outline"
+                className="hidden cursor-pointer md:inline-flex rounded-full border-foreground/20 hover:bg-foreground/5 bg-transparent"
+              >
+              Únete a la waitlist
+              </Button>
+          </Link>
+
 
           {/* Mobile menu button */}
           <Button variant="ghost" size="icon" className="md:hidden" aria-label="Menu">

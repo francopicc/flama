@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative py-20 md:py-[15em] flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24">
+  <section id="inicio" className="relative py-20 md:py-[15em] flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24">
       <div className="container mx-auto max-w-6xl text-center">
         <div className="space-y-6">
           {/* Hero Heading with Didone-style font */}
@@ -23,17 +24,23 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 animate-in fade-in slide-in-from-top-4 duration-700 delay-300">
-            <Button size="lg" className="rounded-full px-8 text-base font-medium group">
-              Únete a la waitlist
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full px-8 text-base font-medium border-foreground/20 bg-transparent"
-            >
-              Conoce más
-            </Button>
+            <Link href="/#waitlist" className="">
+              <Button asChild size="lg" className="rounded-full px-8 text-base font-medium group">
+                <span className="flex items-center">
+                  Únete a la waitlist
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Button>
+            </Link>
+            <Link href="#features">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full cursor-pointer px-8 text-base font-medium border-foreground/20 bg-transparent"
+                >
+                  Conoce más
+                </Button>
+            </Link>
           </div>
         </div>
       </div>
